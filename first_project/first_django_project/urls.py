@@ -16,11 +16,13 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from django.urls import path, re_path
-
+from django.urls import include
 from first_app import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r'^$', views.index, name='index')
+    re_path(r'^$', views.index, name='index'),
+    re_path(r'^first_app/', include('first_app.urls')),
+    re_path(r'^mynewextension/', include('first_app.urls')),
 ]
 
