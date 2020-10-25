@@ -5,3 +5,9 @@ from django.http import HttpResponse
 
 def index(request):
 	return HttpResponse("<em>My Second App</em>")
+
+def help(request):
+	help_tags = {
+		"help_page": "Help Page"
+	}
+	return render(request, "AppTwo/help.html", context=help_tags)
