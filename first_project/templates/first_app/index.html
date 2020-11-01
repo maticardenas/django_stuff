@@ -1,11 +1,13 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="{% static 'css/mystyle.css' %}"/>
 </head>
 <body>
     <h1>Hello this is indexhtml!</h1>
-    {{ insert_me }}
+    <img src="{%static 'images/wallpaper_messi.jpg' %}" alt="Oops! The image didn't load correctly.">
 </body>
 </html>
