@@ -8,17 +8,17 @@
     <h1>USERS BABY!</h1>
 
     {% if users_list %}
-    <ul>
+    <ol>
         {% for user in users_list %}
       <li>User Info
             <ul>
               <li>First name: {{ user.first_name }}</li>
               <li>Last name: {{ user.last_name }}</li>
-                <li>Email: {{ user.email }}</li>
+              <li>Email: {{ user.email }}</li>
             </ul>
       </li>
         {% endfor %}
-    </ul>
+    </ol>
     {% else %}
     <p>NO USERS IN THE DATABASE!</p>
     {% endif %}
